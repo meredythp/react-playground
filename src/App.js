@@ -1,14 +1,27 @@
 import React, { Component } from 'react';
-import './App.css';
-import Messages from './Messages';
+// import Messages from './Messages';
+import Tabs from './state/Tabs';
+
+const tabsProp = [
+  {
+    name: 'First tab',
+    content: 'Lorem ipsum dolor sit...'
+  },
+  {
+    name: 'Second tab',
+    content: 'Laboriosam exercitationem quos...'
+  },
+  {
+    name: 'Third tab',
+    content: 'Fugit, sapiente aspernatur...'
+  },
+];
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Messages</h1>
-        <Messages name="Messages" unread={0}/>
-        <Messages name="Notifications" unread={10}/>
+        <Tabs tabs={tabsProp} />
       </div>
     );
   }

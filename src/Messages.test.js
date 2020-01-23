@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Messages from './Messages';
 import renderer from 'react-test-renderer';
 
-describe('Messages component', () => {
+describe.skip('Messages component', () => {
     it('renders without crashing', () => {
         const div = document.createElement('div');
         ReactDOM.render(<Messages />, div);
