@@ -29,7 +29,11 @@ class HelloWorld extends Component {
         <button onClick={this.handleClickTwo}>
           Friend
         </button>
-        <button onClick={() => {this.setState({who: "React"})}}>
+        <button onClick={() => {
+          return this.setState({
+            who: "React"
+          })
+        }}>
           React
         </button>
       </main>

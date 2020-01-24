@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 class Tabs extends React.Component {
   static defaultProps = {
@@ -8,27 +8,11 @@ class Tabs extends React.Component {
   state = {
     currentTabIndex: 0
   };
-  // initial state of button. no content showing.
-  // state = {}
 
-  // function for secondary state of button. this will be in DidMount.
-  // showContent() {}
-
-  // secondary state of button.
-  // componentDidMount() {
-  //  this.showContent();
-  // }
-
-  // tertiary state of button. close old button when any button is clicked.
-  // componentWillUnmount () {
-  //  
-  // }
-
-  // conditions.
-  // if same button is clicked, nothing happens.
-  // if different button is clicked, content opens.
   handleButtonClick(index) {
-    this.setState({ currentTabIndex: index })
+    this.setState({
+      currentTabIndex: index
+    })
   }
 
   renderButtons() {
@@ -50,12 +34,12 @@ class Tabs extends React.Component {
 
   render() {
     return (
-      <div className="button-div">
+      <div>
         {this.renderButtons()}
-        {!!this.props.tabs.length && this.renderContent()}
+        {this.props.tabs.length>0 && this.renderContent()}
       </div>
     )
-  }u
+  }
 }
 
-export default Tabs;
+export default Tabs

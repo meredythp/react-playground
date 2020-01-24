@@ -1,0 +1,23 @@
+button {
+  padding: 3px;
+  margin: 6px;
+  border: 1px solid black;
+  background-color: lightcoral;
+}
+
+ul {
+  text-align: left;
+  list-style: none;
+}
+
+.content {
+  padding: 0 0 0 9px;
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
