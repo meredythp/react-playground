@@ -28,7 +28,7 @@ class Accordion extends React.Component {
             {section.title}
         </button>
         {/* <div id="content" className={this.DisplayContent(index)}> */}
-          {index === this.state.currentSectionIndex && <div className="content"><p>{section.content}</p></div>}
+        {this.props.sections.length > 0 && index === this.state.currentSectionIndex && <div className="content"><p>{section.content}</p></div>}
         {/* </div> */}
       </li>
     )

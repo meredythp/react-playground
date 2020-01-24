@@ -50,4 +50,14 @@ describe(`Accordion Component`, () => {
     wrapper.find('button').at(0).simulate('click')
     expect(toJson(wrapper)).toMatchSnapshot()
   })
+
+  it('opens a only the clicked section', () => {
+    const wrapper = shallow(<Accordion sections={sections} />)
+    wrapper.find('button').at(0).simulate('click')
+    wrapper.find('button').at(1).simulate('click')
+    wrapper.find('button').at(0).simulate('click')
+    wrapper.find('button').at(2).simulate('click')
+    wrapper.find('button').at(1).simulate('click')
+    expect(toJson(wrapper)).toMatchSnapshot()
+  })
 })

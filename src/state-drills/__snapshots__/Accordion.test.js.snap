@@ -45,6 +45,51 @@ exports[`Accordion Component opens a clicked section 1`] = `
 </div>
 `;
 
+exports[`Accordion Component opens a only the clicked section 1`] = `
+<div
+  className="section-wrapper"
+>
+  <ul
+    className="main-ul"
+  >
+    <li
+      key="0"
+    >
+      <button
+        onClick={[Function]}
+      >
+        Section 1
+      </button>
+    </li>
+    <li
+      key="1"
+    >
+      <button
+        onClick={[Function]}
+      >
+        Section 2
+      </button>
+      <div
+        className="content"
+      >
+        <p>
+          Cupiditate tenetur aliquam necessitatibus id distinctio quas nihil ipsam nisi modi!
+        </p>
+      </div>
+    </li>
+    <li
+      key="2"
+    >
+      <button
+        onClick={[Function]}
+      >
+        Section 3
+      </button>
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`Accordion Component renders empty given no sections 1`] = `
 <div
   className="section-wrapper"
