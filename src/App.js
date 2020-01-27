@@ -22,18 +22,15 @@ class App extends React.Component {
 
   handleAddItem(itemName) {
     const newItems = [
-      ...this.state.shoppingItems, 
-      {
-        name: itemName,
-        checked: false
-      }
+      ...this.state.shoppingItems,
+      { name: itemName, checked: false }
     ]
     this.setState({
       shoppingItems: newItems
     })
   }
 
-  handleDeleteItem = (item) => {
+  handleDeleteItem(item) {
     console.log('handle delete item called', { item });
     const newItems = this.state.shoppingItems.filter(itm => itm !== item)
     this.setState({
@@ -41,7 +38,7 @@ class App extends React.Component {
     })
   }
 
-  handleCheckItem = (item) => {
+  handleCheckItem(item) {
     console.log('handle check item called', { item });
     const newItems = this.state.shoppingItems.map(itm => {
       if (itm === item) {
@@ -63,14 +60,14 @@ class App extends React.Component {
         <main>
           <section>
             <AddItemForm
-              onAddItem={() => this.handleAddItem()}
+              onAddItem={(itemName) => this.handleAddItem(itemName)}
             />
           </section>
           <section>
             <ShoppingList
               items={this.state.shoppingItems}
-              onDeleteItem={this.handleDeleteItem}
-              onCheckItem={this.handleCheckItem}
+              onDeleteItem={(item) => this.handleDeleteItem(item)}
+              onCheckItem={(item) => this.handleCheckItem(item)}
             />
           </section>
         </main>

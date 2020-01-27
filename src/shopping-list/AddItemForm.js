@@ -9,7 +9,7 @@ export default class AddItemForm extends React.Component {
   
   render() {
     return (
-      <form onSubmit={() => this.onSubmitForm}>
+      <form onSubmit={(e) => this.onSubmitForm(e)}>
         <input
           name="itemToAdd"
           type="text"
