@@ -3,7 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Projects in this repo
 
 1. leapyearprogram
-Leap year app used for .test.js exercise.
+- Leap year app used for .test.js exercise.
 
 2. shopping-list
 The use of forms to intake new items to add to a list.
